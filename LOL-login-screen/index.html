@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOL Login Screen</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="xxx">
+        <a class="point">-</a>
+        <a class="point">?</a>
+        <a class="point">x</a>
+    </div>
+    <div class="background">
+        <img src="assets/iconeL.png" alt="iconeL" class="iconeL">
+        <p class="message">Sign in with your Riot Account</p>
+        <form>
+            <div>
+                <input type="text" class="input" id="username" onClick="changeLabel(0)" onBlur="isFilled(0)">
+                <label for="username" class="label">USERNAME</label>
+            </div>
+            <div class='inputPass'>
+                <input type="password" class="input" id="password" onClick="changeLabel(1)" onBlur="isFilled(1)">
+                <label for="password" class="label">PASSWORD</label>
+            </div>
+            <label class="container">Stay singed in
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <input type="image" value="submit" class="submit" src="./assets/seta.png">
+        </form>
+        <div class="footerMessage">
+            <a>CREATE ACCOUNT</a>
+            <a>CAN'T SIGN IN?</a>
+        </div>
+    </div>
+    <div class="wallpaper">
+        <img src="assets/wallpaperLOL.jpg" class="imgLOL">
+    </div>
+</body>
+
+</html>
