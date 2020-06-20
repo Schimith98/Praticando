@@ -1,0 +1,181 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+/* ---------------------------------------------------------- */
+@media only screen and (max-width: 600px){
+
+body{
+  height: 10vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 10%;
+
+  background-image: url('../img/wallpaper.jpg');
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: repeat-y; 
+}
+
+/* The header */
+header {
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    
+    background-color: rgba(141, 140, 140, 0.808);
+
+    border-radius: 5px;
+    justify-content: space-between;
+}
+header i{
+    font-size: 6vw;
+}
+header span{
+  font-size: 5vw;
+    cursor: default;
+}
+
+/* The section */
+section {
+    width: 100%;
+    
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    
+    
+}
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+section ul li{
+    width: 100%;
+    /* height: 10vw; */
+    display: flex;
+    flex-direction: row;
+    border: solid black;
+    border-radius: 10px;
+    background-color: rgba(53, 51, 51, 0.774);
+}
+section ul li textarea{
+    margin: 2% 0 0 4%;
+    width: 90%;
+    
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    resize: none;
+
+    font-size: 5vw;
+    font-family: monospace;
+}
+section ul li input:hover{
+    cursor: text;
+}
+section ul li i{
+    width: 5%;
+    height: 5%;
+    font-size: 3vw;
+    margin: 5% 2% 2% 2%;
+    color: white;
+}
+section ul li i:hover{
+    cursor: pointer;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    height: 5%;
+    width: 5%;
+    padding-left: 5%;
+    margin-top: 4%;
+    cursor: pointer;
+    font-size: 3vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 4vw;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 25%;
+    top: 0;
+    width: 50%;
+    height: 3vw;
+    border: solid white;
+    border-width: 0 0.8vw 0.8vw 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+  /* The footer */
+  footer {
+    width: 100%;
+  }
+  footer button{
+      width: 100%;
+      height: 10vw;
+      border-radius: 5px;
+      background-color: rgba(15, 41, 71, 0.877);
+      color: white;
+      font-size: 6vw;
+  }
+}
