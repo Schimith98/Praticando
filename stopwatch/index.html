@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stopwatch</title>
+    </head>
+
+    <style>
+        *{
+            text-align: center;
+            background-color: darkslategray;
+            color: blanchedalmond;
+        }
+        button{
+            width: 120px;
+            height: 30px;
+            border-radius: 25px;
+        }
+    </style>
+
+    <body>
+        <div>
+            <h1>STOPWACTH</h1>
+            <h1>VANILLA JAVASCRIPT STOPWACTH</h1>
+            <h1 id="counter">00:00:00</h1>
+            <button id="start" onclick="start(event)">START</button>
+            <button id="pause" onclick="pause(event)">PAUSE</button>
+            <button id="stop" onclick="stop()">STOP</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</hmtl>
