@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScalculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+        <div class="calculator">
+
+            <input id="viewfinder" disabled>
+
+            <div id="error"></div>
+
+            <div class="operators">
+                <button id="sum" onclick="insert('+')">+</button>
+                <button id="sub" onclick="insert('-')">-</button>
+                <button id="mult" onclick="insert('*')">x</button>
+                <button id="div" onclick="insert('/')">÷</button>
+            </div>
+
+            <div class="numbersAndEqual">
+                <div class="numbers">
+                    <div>
+                        <button onclick="insert(7)">7</button>
+                        <button onclick="insert(8)">8</button>
+                        <button onclick="insert(9)">9</button>
+                    </div>
+                    <div>
+                        <button onclick="insert(4)">4</button>
+                        <button onclick="insert(5)">5</button>
+                        <button onclick="insert(6)">6</button>
+                    </div>
+                    <div>
+                        <button onclick="insert(1)">1</button>
+                        <button onclick="insert(2)">2</button>
+                        <button onclick="insert(3)">3</button>
+                    </div>
+                    <div>
+                        <button onclick="insert(0)">0</button>
+                        <button onclick="insert('.')">.</button>
+                        <button id="del" onclick="del()">C</button>
+                    </div>
+                </div>
+                <button id="equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</hmtl>

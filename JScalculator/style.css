@@ -1,0 +1,74 @@
+body{
+    width: 500px;
+    margin: 4%;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+}
+
+.calculator{
+    padding: 20px;
+    border: solid black;
+    width: 380px;
+}
+#viewfinder{
+    width: 350px;
+    height: 60px;
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 2.5rem;
+    overflow-x: auto;
+}
+
+.operators button{
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    cursor: pointer;
+    background-color: darkgray;
+}
+.numbersAndEqual{
+    display: flex;
+}
+.numbers div button{
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    cursor: pointer;
+}
+
+#equal{
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 10px;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+#error{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
