@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drum Kit</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>JavaScript Drum Kit</h1>
+        <section>
+            <div>
+                <img src="img/drum.PNG">
+            </div>
+            <div class="key-map-wrapper">
+                <h2>Key Mapping</h2>
+                <ul>
+                    <li>
+                        <kbd class="key-code">E</kbd>
+                        <span class="key-sound">Crash</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">R</kbd>
+                        <span class="key-sound">Ride</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">F</kbd>
+                        <span class="key-sound">floor tom</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">G</kbd>
+                        <span class="key-sound">Mid tom</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">H</kbd>
+                        <span class="key-sound">High tom</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">V</kbd>
+                        <kbd class="key-code">B</kbd>
+                        <span class="key-sound">Kick</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">J</kbd>
+                        <span class="key-sound">Snare</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">I</kbd>
+                        <span class="key-sound">Hi-Hat-Open</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">K</kbd>
+                        <span class="key-sound">Hi-hat-Closed</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <audio id="74" src="sounds/snare.wav"></audio>
+        <audio id="66" src="sounds/kick.wav"></audio>
+        <audio id="86" src="sounds/kick.wav"></audio>
+        <audio id="72" src="sounds/tom-high.wav"></audio>
+        <audio id="71" src="sounds/tom-mid.wav"></audio>
+        <audio id="70" src="sounds/tom-low.wav"></audio>
+        <audio id="69" src="sounds/crash.wav"></audio>
+        <audio id="82" src="sounds/ride.wav"></audio>
+        <audio id="73" src="sounds/hihat-open.wav"></audio>
+        <audio id="75" src="sounds/hihat-close.wav"></audio>
+
+        <script src="script.js"></script>
+    </body>
+</hmtl>

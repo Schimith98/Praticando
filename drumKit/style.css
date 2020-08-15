@@ -1,0 +1,31 @@
+h1, h2{
+   margin: 10px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    width: 408px;
+    height: 344px;
+}
+.key-map-wrapper{
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    
+}
+
+ul{
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 0;
+    text-align: left;
+}
+li{
+    padding: 0;
+    margin: 10px 0 10px 0;
+}
+kbd{
+    font-size: 20px;
+    
+}
