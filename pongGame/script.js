@@ -2,18 +2,13 @@ let canvas = document.querySelector('canvas')
 canvas.width = 800;
 canvas.height = 400;
 var ctx = canvas.getContext('2d')
-let playerScore = 0
-let computerScore = 0
-let rounds = 3
 
-function randomInt(min, max) {
-    return min + Math.floor((max - min) * Math.random());
+// ------------------------------------------------------------------
+function init() {
+    document.getElementById("play").setAttribute('disabled', true)
+    const game = new Game()
 }
-function randomY(){
-    let ballY = randomInt(100, 301)
-    ballY = ballY - ballY % 10
-    return ballY
-}
+// ------------------------------------------------------------------
 function draw(x, y, width, height, color = 'black') {
     if (canvas.getContext) {
         ctx.fillStyle = color
@@ -25,7 +20,23 @@ function erase(x, y, width, height) {
         ctx.clearRect(x, y, width, height);
     }
 }
-
+// ------------------------------------------------------------------
+class Ball {
+    constructor(x, y, width, height, speed, horizontalDirection, verticalDirection) {
+        this.x = x
+        this.y = y()
+        this.width = width
+        this.height = height
+        this.speed = speed
+        this.horizontalDirection = horizontalDirection
+        this.verticalDirection = verticalDirection
+        this.drawBall()
+    }
+    drawBall() {
+        draw(this.x, this.y, this.width, this.height)
+    }
+}
+// ------------------------------------------------------------------
 class Paddle {
     constructor(x, y, width, height, speed) {
         this.x = x
@@ -38,118 +49,132 @@ class Paddle {
     drawPaddle() {
         draw(this.x, this.y, this.width, this.height)
     }
-    moveUp() {
-        if (this.y - this.speed >= 0) { // colisão com teto
+    movePaddleUp() {
+        if (this.y - this.speed >= 0) { // collision with ceiling
             erase(this.x, this.y, this.width, this.height)
             this.y = this.y - this.speed
             draw(this.x, this.y, this.width, this.height)
         }
     }
-    moveDown() {
-        if (this.y + this.speed <= 350) { // colisão com chão
+    movePaddleDown() {
+        if (this.y + this.speed <= 350) { // collision with floor
             erase(this.x, this.y, this.width, this.height)
             this.y = this.y + this.speed
             draw(this.x, this.y, this.width, this.height)
         }
     }
 }
-const playerPaddle = new Paddle(20, 180, 10, 50, 10)
-const computerPaddle = new Paddle(770, 180, 10, 50, 10)
-
-let ballMovement
-class Ball {
-    constructor(x, y, width, height, speed, horizontalDirection, verticalDirection) {
-        console.log(y)
-        this.x = x
-        this.y = y
-        this.width = width
-        this.height = height
-        this.speed = speed
-        this.horizontalDirection = horizontalDirection
-        this.verticalDirection = verticalDirection
-        this.drawBall()
-        ballMovement = setInterval(() => { this.move() }, 50);
+// ------------------------------------------------------------------
+let player = new Paddle(20, 180, 10, 50, 10)
+let computer = new Paddle(770, 180, 10, 50, 10)
+// ------------------------------------------------------------------
+function Game() {
+    let rounds = 3
+    let computerScore = 0
+    let playerScore = 0
+    document.getElementById("playerScore").innerText = playerScore
+    document.getElementById("computerScore").innerText = computerScore
+    //-------------------------
+    function randomInt(min, max) {
+        return min + Math.floor((max - min) * Math.random());
     }
-    drawBall() {
-        draw(this.x, this.y, this.width, this.height)
-    }
-    move() {
-        erase(this.x, this.y, this.width, this.height)
+    //--------------------------
 
-        if (this.y <= 0) { //colide com o teto
-            this.verticalDirection = 1
-        }
-        if (this.y >= 390) { //colide com o chão
-            this.verticalDirection = 0
-        }
-        if (this.x <= 0) {  //computer goal 
-            //this.horizontalDirection = 1
-            clearInterval(ballMovement)
-            computerScore++
-            document.getElementById("computerScore").innerText = computerScore
-            if (computerScore != rounds) {
-                const ball = new Ball(390, randomY(), 10, 10, 10, randomInt(0, 2), randomInt(0, 2))
-            }
-        }
-        if (this.x >= 790) {  //player goal 
-            //this.horizontalDirection = 0
-            clearInterval(ballMovement)
-        }
-
-        if (this.x - this.speed < playerPaddle.x + playerPaddle.width &&  // player paddle colision
-            this.x + this.width - this.speed > playerPaddle.x &&
-            this.y - this.speed < playerPaddle.y + playerPaddle.height &&
-            this.y + this.height - this.speed > playerPaddle.y) {
-            this.horizontalDirection = 1
-        }
-        if (this.x + this.speed < computerPaddle.x + computerPaddle.width &&  // computer paddle colision
-            this.x + this.width + this.speed > computerPaddle.x &&
-            this.y + this.speed < computerPaddle.y + computerPaddle.height &&
-            this.y + this.height + this.speed > computerPaddle.y) {
-            this.horizontalDirection = 0
-        }
-
-        if (this.horizontalDirection == 1) {
-            this.x = this.x + this.speed
-        } else {
-            this.x = this.x - this.speed
-        }
-        if (this.verticalDirection == 1) {
-            this.y = this.y + this.speed
-
-
-        } else {
-            this.y = this.y - this.speed
-        }
-
-        if (this.y <= computerPaddle.y) {
-            computerPaddle.moveUp()
-        }
-        if (this.y >= computerPaddle.y) {
-            computerPaddle.moveDown()
-        }
-
-        draw(this.x, this.y, this.width, this.height)
-    }
-}
-
-
-
-
-function init(e) {
-    e.target.setAttribute('disabled', true)
-
-    const ball = new Ball(390, randomY(), 10, 10, 10, randomInt(0, 2), randomInt(0, 2))
-
-
+    // Player Paddle Movement
     document.addEventListener('keydown', getKey)
     function getKey() {
         const key = event.keyCode;
         if (key == 38) {
-            playerPaddle.moveUp()
+            player.movePaddleUp()
         }
         if (key == 40) {
-            playerPaddle.moveDown()
+            player.movePaddleDown()
         }
     }
+
+    // ------------------------------------------
+
+    function newBall() {
+        const ball = new Ball(390, () => {
+            let ballY = randomInt(100, 301)
+            ballY = ballY - ballY % 10
+            return ballY
+        }, 10, 10, 10, randomInt(0, 2), randomInt(0, 2))
+
+        // ------------------------------------------
+
+        function ballMove() {
+            erase(ball.x, ball.y, ball.width, ball.height)
+
+            if (ball.y <= 0) { //collision with ceiling
+                ball.verticalDirection = 1
+            }
+            if (ball.y >= 390) { //collision with floor
+                ball.verticalDirection = 0
+            }
+            if (ball.x <= 0) {  //computer goal 
+                clearInterval(ballLooping)
+                clearInterval(computerLooping)
+                computerScore++
+                document.getElementById("computerScore").innerText = computerScore
+                if (computerScore == rounds) {
+                    document.getElementById("play").removeAttribute('disabled', true)
+                }else{
+                    newBall()
+                }
+            }
+            if (ball.x >= 790) {  //player goal 
+                clearInterval(ballLooping)
+                clearInterval(computerLooping)
+                playerScore++
+                document.getElementById("playerScore").innerText = playerScore
+                if (playerScore == rounds) {
+                    document.getElementById("play").removeAttribute('disabled', true)
+                }else{
+                    newBall()
+                }
+            }
+
+            if (ball.x - ball.speed < player.x + player.width &&  // player paddle colision
+                ball.x + ball.width - ball.speed > player.x &&
+                ball.y - ball.speed < player.y + player.height &&
+                ball.y + ball.height - ball.speed > player.y) {
+                ball.horizontalDirection = 1
+            }
+            if (ball.x + ball.speed < computer.x + computer.width &&  // computer paddle colision
+                ball.x + ball.width + ball.speed > computer.x &&
+                ball.y + ball.speed < computer.y + computer.height &&
+                ball.y + ball.height + ball.speed > computer.y) {
+                ball.horizontalDirection = 0
+            }
+
+            if (ball.horizontalDirection == 1) {
+                ball.x = ball.x + ball.speed
+            } else {
+                ball.x = ball.x - ball.speed
+            }
+            if (ball.verticalDirection == 1) {
+                ball.y = ball.y + ball.speed
+            } else {
+                ball.y = ball.y - ball.speed
+            }
+
+            draw(ball.x, ball.y, ball.width, ball.height)
+        }
+        let ballLooping = setInterval(() => { ballMove() }, 80);
+
+        // Computer Paddle Movement
+        function paddleAutoMove() {
+            if (ball.y <= computer.y) {
+                computer.movePaddleUp()
+            } else {
+                computer.movePaddleDown()
+            }
+        }
+        let computerLooping = setInterval(() => { paddleAutoMove() }, 100);
+        //----------------------------------------
+
+        return ball
+    }
+    newBall()
 }
