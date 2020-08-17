@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pong Game</title>
+    </head>
+    <style>
+        *{
+            text-align: center;
+            font-family: monospace;
+            font-size: 30px;         
+        }
+        h2{
+            display: inline;
+            padding: 0 50px 0 50px;
+        }
+        canvas{
+            padding: 0;
+            background-color: cadetblue;
+            border: solid rgb(92, 92, 92);
+        }
+        button{
+            display: block;
+            width: 100px;
+            height: 50px;
+            margin-left: calc(50% - 50px);
+        }
+    </style>
+    <body>
+        <h1>PONG GAME</h1>
+        <div class="placarDiv">
+            <h2>-PLAYER-</h2>
+            <span id="playerScore">0</span>
+            <h2>SCORE</h2>
+            <span id="computerScore">0</span>
+            <h2>COMPUTER</h2>
+        </div>
+        
+        <canvas></canvas>
+
+        <button onclick="init(event)">PLAY</button>
+        <script src="script.js"></script>
+    </body>
+</html>
