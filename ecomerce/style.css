@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    height: 100%;
+
+    background-color: rgb(58, 58, 58);
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/* -----------  HEADER  ---------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    
+    width: 100vw;
+    height: 10%;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+header div{
+    display: flex;
+    width: 160px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 5% 0 5%;
+}
+header div i{
+    font-size: 20px;
+    margin-top: 10%;
+}
+header div i:hover, header div a:hover{
+    cursor: pointer;
+    color: rgb(200, 200, 200);
+}
+header div a{
+    font-size: 18px;
+    height: 18px;
+}
+header .tittle{
+    display: block;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+header .tittle a{
+    height: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* -----------  HEADER  ---------------*/
+
+.nav-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90%;
+}
+
+/* -----------  NAV  ---------------*/
+
+nav{
+    width: 20%;
+    height: 100%;
+    padding: 10% 0 0 5%;
+    box-sizing: border-box;
+}
+nav a{
+    font-size: 40px;
+}
+nav div{
+    background-color: white;
+    width: 2%;
+    height: 16%;
+    margin: 15% 0 15% 0;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 10%;
+}
+nav ul li{
+    font-size: 18px;
+    width: 100%;
+    height: 18px;
+    margin: 15% 0 15% 0;
+}
+nav ul li a{
+    font-size: 18px;
+}
+nav ul li a:hover{
+    cursor: pointer;
+    color: rgb(200, 200, 200);
+}
+
+/* -----------  NAV  ---------------*/
+
+/* -----------  SECTION ---------------*/
+
+section{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 100%;
+    margin:0;
+}
+section .slider{
+    width: 70%;
+    height: 100%;
+}
+.slider div{
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    margin-top: 5% ;
+}
+.slider div i{
+    font-size: 16px;
+}
+.mySlides{
+    display: block;
+    width: 90%;
+    height: 75%;
+    margin: 10% auto 0 auto;
+
+}
+
+
+section .product-info{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    padding-top:25% ;
+    
+}
+.product-type{
+    width: 100%;
+    height: 18px;
+    font-size: 18px;
+}
+.product-name{
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+}
+.product-info button{
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 40%;
+
+    border: inset white;
+}
+
+
+
+
+
+/* -----------  SECTION ---------------*/
