@@ -1,0 +1,35 @@
+/* -----------  PRODUCT - FEATURED ---------------*/
+.product-featured{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    padding-top: 12%;
+    
+}
+.product-featured-type{
+    width: 100%;
+    height: 18px;
+    font-size: 18px;
+    color: rgb(200, 200, 200);
+}
+.product-featured-name{
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+}
+.product-featured button{
+    width: 44%;
+    height: 30px;
+    font-size: 20px;
+    margin:70% 0 0 30%;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(40, 40, 40);
+    border: none;
+}
+.product-info button:hover{
+   cursor: pointer;
+
+}

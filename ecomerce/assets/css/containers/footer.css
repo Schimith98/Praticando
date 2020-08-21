@@ -1,0 +1,78 @@
+footer{
+    height: 15%;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    background-color: rgb(71, 65, 53);
+}
+
+footer a{
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+footer div{
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    
+    background-color: rgba(255, 255, 255, 0);
+}
+footer div img{
+    margin: 0 0 0 5%;
+}
+
+
+footer div div{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer div div span{
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 1%;
+}
+footer div div p{
+    background-color: rgba(255, 255, 255, 0);
+    margin: 1%;
+}
+footer div div a{
+    font-size: 15px;
+    font-weight: normal;
+    margin: 1%;
+}
+
+footer div div div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+}
+footer div div div i{
+    margin: 0 5% 0 5%;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+footer .form{
+    width: 70%;
+}
+footer input{
+    box-sizing: border-box;
+    margin: 1%;
+    width: 100%;
+    height: 50%;
+}
+footer button{
+    height: 15%;
+    width: 10%;
+    margin-top:5%;
+}
+
+

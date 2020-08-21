@@ -1,0 +1,72 @@
+/* -----------  PAGE 2---------------*/
+.page2{
+    background-color: purple;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+}
+.page2 .tittle2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 5%;
+    margin: 5% 0 0 0;
+}
+
+.page2 .tittle2 div a:first-child{
+    font-size: 25px;
+    font-weight: bold;
+}
+.page2 .tittle2 div a:last-child{
+    font-size: 10px;
+}
+
+.page2 .tittle2 div:last-child{
+    padding-top: 2%;
+    height: 15px;
+}
+.page2 .tittle2 div span{
+    font-size: 15px;
+    height: 15px;
+}
+.page2 .tittle2 div span:hover{
+    cursor: pointer;
+}
+
+
+
+
+.page2 .popular-products{
+    width: 100%;
+    height: 95%;
+    
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.page2 .popular-products .product-info{
+    width: 20%;
+    height: 40%;
+    margin: 1%;
+}
+
+.page2 .popular-products .product-info .product-img{
+    width: 100%;
+    height: 80%;
+}
+
+.page2 .popular-products .product-info div{
+    width: 100%;
+    height: 10%;  
+}
+.page2 .popular-products .product-info div a{
+    font-size: 18px;
+}
+.page2 .popular-products .product-info .product-brand{
+    font-size: 12px;
+}

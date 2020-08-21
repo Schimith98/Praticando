@@ -4,54 +4,311 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ecomerce</title>
+        <title>ecommerce</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
     </head>
 
     <body>
-        <header>
-            
-            <div>
-                <i class='fas fa-stream'></i>
-                <i class='fas fa-search'></i>
-            </div>
-            <div class="tittle">
-                <a>ecomerce</a>
-            </div>
-            <div>
-                <a>account</a>
-                <i class='fas fa-shopping-cart'></i>
-            </div>
-        </header>
-        <div class="nav-section">
-            <nav>
-                <a>Shop</a>
-                <div></div>
-                <ul>
-                    <li><a>Lorem ipsum dolor</a></li>
-                    <li><a>Phasellus nec turpis</a></li>
-                    <li><a>Praesent tempor</a></li>
-                    <li><a>Cras et lorem vel </a></li>
-                    <li><a>Maecenas urna</a></li>
-                </ul>
-            </nav>
-            <section>
+        <div class="page1">
+            <header>
+
+                <div>
+                    <i class='fas fa-stream'></i>
+                    <i class='fas fa-search'></i>
+                </div>
+                <div class="tittle">
+                    <a>ecommerce</a>
+                </div>
+                <div>
+                    <a>account</a>
+                    <i class='fas fa-shopping-cart'></i>
+                </div>
+            </header>
+            <div class="nav-section">
+                <nav>
+                    <a>Shop</a>
+                    <div></div>
+                    <ul>
+                        <li><a>Lorem ipsum dolor</a></li>
+                        <li><a>Phasellus nec turpis</a></li>
+                        <li><a>Praesent tempor</a></li>
+                        <li><a>Cras et lorem vel </a></li>
+                        <li><a>Maecenas urna</a></li>
+                    </ul>
+                </nav>
                 <div class="slider">
-                    <img class="mySlides" src="https://static9.depositphotos.com/1000441/1163/i/450/depositphotos_11639513-stock-photo-boutique-display-window.jpg">
+                    <img class="mySlides" src="./assets/imgs/img1.jpg">
+                    <img class="mySlides" src="./assets/imgs/img2.jpg">
+                    <img class="mySlides" src="./assets/imgs/img3.jpeg">
                     <div>
-                        <i class='far fa-circle'></i>
-                        <i class='far fa-circle'></i>
-                        <i class='far fa-circle'></i>
+                        <span class="slideDot" onclick="showDivs(0)"><i class='far fa-circle'></i></span>
+                        <span class="slideDot" onclick="showDivs(1)"><i class='far fa-circle'></i></span>
+                        <span class="slideDot" onclick="showDivs(2)"><i class='far fa-circle'></i></span>
                     </div>
                 </div>
-                <div class="product-info"> 
-                    <a class="product-type">Limited edition</a>
-                    <a class="product-name">Your Product</a>
+                <div class="product-featured">
+                    <a class="product-featured-type">Limited edition</a>
+                    <a class="product-featured-name">Your Product</a>
                     <button>Shop now</button>
                 </div>
-            </section>
+            </div>
         </div>
-        
+        <div class="page2">
+            <div class="tittle2">
+                <div>
+                    <a>Popular</a>
+                    <a>SHOP</a>
+                </div>
+                <div>
+                    <span>Previous</span> | <span>Next</span>
+                </div>
+            </div>
+            <div class="popular-products">
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="tittle2">
+                <div>
+                    <a>Categories</a>
+                    <a>SHOP</a>
+                </div>
+                <div>
+                    <span>Previous</span> | <span>Next</span>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="category-info">
+                    <img class="category-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="category-name">category name</a>
+                        <p class="category-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="category-info">
+                    <img class="category-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="category-name">category name</a>
+                        <p class="category-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="category-info">
+                    <img class="category-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="category-name">category name</a>
+                        <p class="category-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="category-info">
+                    <img class="category-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="category-name">category name</a>
+                        <p class="category-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="tittle2">
+                <div>
+                    <a>Popular</a>
+                    <a>SHOP</a>
+                </div>
+                <div>
+                    <span>Previous</span> | <span>Next</span>
+                </div>
+            </div>
+            <div class="popular-products">
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <img class="product-img" src="./assets/imgs/img1.jpg">
+                    <div>
+                        <a class="product-name">product name</a>
+                        <a class="product-brand">brand</a>
+                    </div>
+                    <div>
+                        <a class="product-price">$99,99</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a>Our Services</a>
+            <div>
+                <img src="./assets/imgs/img1.jpg">
+                <div>
+                    <span>Doing our best since 1998</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam felis, tincidunt eu fermentum
+                        quis, interdum sed eros.</p>
+                    <a>Read About Us</a>
+                    <div>
+                        <i class='fab fa-facebook'></i>
+                        <i class='fab fa-instagram'></i>
+                        <i class='fab fa-whatsapp'></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span>Newsletter</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="form">
+                    <input type="name" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button>Send</button>
+            </div>
+        </footer>
+        <script src="./assets/js/script.js"></script>
     </body>
 </hmtl>

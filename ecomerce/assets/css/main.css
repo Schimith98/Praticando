@@ -1,0 +1,14 @@
+
+@import './base1.css';
+
+@import './containers/header.css';
+@import './containers/navHome.css';
+@import './containers/slider.css';
+@import './containers/featuredProduct.css';
+
+@import './containers/page2.css';
+@import './containers/page3.css';
+
+@import './containers/footer.css';
+
+
